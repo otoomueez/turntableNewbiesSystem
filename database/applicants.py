@@ -1,3 +1,4 @@
+# import sqlite module
 import sqlite3
 
 try:
@@ -5,10 +6,16 @@ try:
     # Create a cursor object
     getit = conn.cursor()
     query = """CREATE TABLE Applicants(
-        id INTEGER NOT NULL,
-        name TEXT,
-        photo BLOB,
-        resume BLOB
+        f_name TEXT NOT NULL,
+        m_name TEXT ,
+        l_name TEXT NOT NULL,
+        gender TEXT NOT NULL,
+        email TEXT PRIMARY KEY NOT NULL,
+        telephone TEXT,
+        year_of_graduation INTEGER NOT NULL,
+        school TEXT,
+        application_type TEXT NOT NULL,
+        upload_resume BLOB NOT NULL
     )"""
     getit.execute("DROP TABLE IF EXISTS Applicants")
     getit.execute(query)
