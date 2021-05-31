@@ -27,6 +27,40 @@
         padding: 40px;
         max-width: 100%;
       }
+      .searchfield{
+        position: relative;
+        margin: 0 0 10px;
+        text-align: center;
+      }
+      .searchfield p{
+        color: #fff;
+        display: inline-block;
+      }
+      .searchbar{
+        border-radius: 0 20px;
+        padding: 5px 10px;
+        border: 1px solid #ea6153;
+        background-image: linear-gradient(#f5f5fd  5%, #f0f0f0  100%);
+
+      }
+      .drop{
+        border-radius: 0 10px 10px 0;
+        color: #000;
+        background: lightgrey;
+      }
+
+       .button {background-image: linear-gradient( #ea6153 0%, #ea6153  51%, #e52d27  100%)}
+       .button {
+          padding: 5px 10px;
+          text-transform: uppercase;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: white;
+          border-radius: 10px;
+        }
+
+
+
 
       .table {
         margin: 0 0 40px 0;
@@ -100,7 +134,21 @@
 </head>
 <body>
     <div class="wrapper">
-
+      <form class="searchfield" action="http://localhost:5000/admin_panel" method="post">
+        <p>Search by:</p>
+        <select class="drop" name="column">
+          <option name="" value="f_name">F.Name</option>
+          <option name="" value="m_name">M.Name</option>
+          <option name="" value="l_name">L.Name</option>
+          <option name="" value=gender"">Gender</option>
+          <option name="" value="email">Email</option>
+          <option name="" value="year_of_graduation">Year Graduated</option>
+          <option name="" value="school">School</option>
+          <option name="" value="application_type">Application Type</option>
+        </select>
+        <input class="searchbar" type="text" placeholder="Search record" name="record">
+        <input class="button" type="submit" value="Search">
+      </form>
       <div class="table">
 
         <div class="row header">

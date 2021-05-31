@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Sidebar 04</title>
+  	<title>TNS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
   </head>
   <body>
 		
@@ -24,8 +24,8 @@
                 <img class="logo_img" src="https://pbs.twimg.com/profile_images/1308038223910916097/0KJOLcaX_400x400.jpg" alt="logo"/>
                 </h1>
                 <div class="btns">
-                    <a href="register.html" class="button"><button class="link">REGISTER</button></a>
-                    <a href="adminLogin.html" class="button"><button class="link">ADMIN LOGIN</button></a>
+                    <a href="http://localhost:5000/register" class="button"><button class="link">REGISTER</button></a>
+                    <a href="http://localhost:5000/adminlogin" class="button"><button class="link">ADMIN LOGIN</button></a>
                 </div>
                 <div class="contact">
                     <p>Contact us on:</p>
@@ -71,6 +71,6 @@
         window.onresize = autoResizeDiv();
         autoResizeDiv();
     </script>
-    <script src="../main.js"></script>
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
   </body>
 </html>
