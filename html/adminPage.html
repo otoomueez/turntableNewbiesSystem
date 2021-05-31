@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #3b3b3b;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        background: #2b2b2b;
+        width: 100%;
+      }
+      @media screen and (max-width: 580px) {
+        body {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+
+      .wrapper {
+        margin: 0 auto;
+        padding: 40px;
+        max-width: 100%;
+      }
+      .searchfield{
+        position: relative;
+        margin: 0 0 10px;
+        text-align: center;
+      }
+      .searchfield p{
+        color: #fff;
+        display: inline-block;
+      }
+      .searchbar{
+        border-radius: 0 20px;
+        padding: 5px 10px;
+        border: 1px solid #ea6153;
+        background-image: linear-gradient(#f5f5fd  5%, #f0f0f0  100%);
+
+      }
+      .drop{
+        border-radius: 0 10px 10px 0;
+        color: #000;
+        background: lightgrey;
+      }
+
+       .button {background-image: linear-gradient( #ea6153 0%, #ea6153  51%, #e52d27  100%)}
+       .button {
+          padding: 5px 10px;
+          text-transform: uppercase;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: white;
+          border-radius: 10px;
+        }
+
+        #logout{
+          border-radius: 10px;
+          padding: 4px;
+          float: right;
+          margin: 10px 0 0 0;
+        }
+        #logout a{
+          text-decoration: none;
+        }
+
+
+
+
+      .table {
+        margin: 0 0 40px 0;
+        width: 100%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        display: table;
+      }
+      @media screen and (max-width: 580px) {
+        .table {
+          display: block;
+        }
+      }
+
+      .row {
+        display: table-row;
+        background: #f6f6f6;
+      }
+      .row:nth-of-type(odd) {
+        background: #e9e9e9;
+      }
+      .row.header {
+        font-weight: 900;
+        color: #ffffff;
+        background: #ea6153;
+      }
+      .row.green {
+        background: #27ae60;
+      }
+      .row.blue {
+        background: #2980b9;
+      }
+      @media screen and (max-width: 580px) {
+        .row {
+          padding: 14px 0 7px;
+          display: block;
+        }
+        .row.header {
+          padding: 0;
+          height: 6px;
+        }
+        .row.header .cell {
+          display: none;
+        }
+        .row .cell {
+          margin-bottom: 10px;
+        }
+        .row .cell:before {
+          margin-bottom: 3px;
+          content: attr(data-title);
+          min-width: 98px;
+          font-size: 10px;
+          line-height: 10px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #969696;
+          display: block;
+        }
+      }
+
+      .cell {
+        padding: 6px 12px;
+        display: table-cell;
+      }
+      @media screen and (max-width: 580px) {
+        .cell {
+          padding: 2px 16px;
+          display: block;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+      <form class="searchfield" action="http://localhost:5000/admin_panel" method="post">
+        <p>Search by:</p>
+        <select class="drop" name="column">
+          <option name="" value="f_name">F.Name</option>
+          <option name="" value="m_name">M.Name</option>
+          <option name="" value="l_name">L.Name</option>
+          <option name="" value="gender">Gender</option>
+          <option name="" value="email">Email</option>
+          <option name="" value="year_of_graduation">Year Graduated</option>
+          <option name="" value="school">School</option>
+          <option name="" value="application_type">Application Type</option>
+        </select>
+        <input class="searchbar" type="text" placeholder="Search record" name="record">
+        <input class="button" type="submit" value="Search">
+        <button id="logout"><a href="{{url_for('display_homepage')}}">Sign out</a></button>
+      </form>
+      <div class="table">
+
+        <div class="row header">
+          <div class="cell">
+            First Name
+          </div>
+          <div class="cell">
+            Middle Name
+          </div>
+          <div class="cell">
+            Last Name
+          </div>
+          <div class="cell">
+            Gender
+          </div>
+          <div class="cell">
+            Email
+          </div>
+          <div class="cell">
+            Phone
+          </div>
+          <div class="cell">
+            Year of Graduation
+          </div>
+          <div class="cell">
+            School
+          </div>
+          <div class="cell">
+            Application Type
+          </div>
+          <div class="cell">
+            Resume
+          </div>
+        </div>
+        {% for e in details %}
+        <div class="row">
+          <div class="cell" data-title="First Name">
+            {{ e[0] }}
+          </div>
+          <div class="cell" data-title="Middle Name">
+            {{ e[1] }}
+          </div>
+          <div class="cell" data-title="Last Name">
+            {{ e[2] }}
+          </div>
+          <div class="cell" data-title="Gender">
+            {{ e[3] }}
+          </div>
+          <div class="cell" data-title="Email">
+            {{ e[4] }}
+          </div>
+          <div class="cell" data-title="Phone">
+            {{ e[5] }}
+          </div>
+          <div class="cell" data-title="Year of Graduation">
+            {{ e[6] }}
+          </div>
+          <div class="cell" data-title="School">
+            {{ e[7] }}
+          </div>
+          <div class="cell" data-title="Application Type">
+            {{ e[8] }}
+          </div>
+          <div class="cell" data-title="Resume">
+            {{ e[9] }}
+          </div>
+
+        </div>
+        {% endfor %}
+
+
+      </div>
+
+  </div>
+
+</body>
+</html>
