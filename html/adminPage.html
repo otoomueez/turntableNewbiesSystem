@@ -144,7 +144,7 @@
 </head>
 <body>
     <div class="wrapper">
-      <form class="searchfield" action="http://localhost:5000/admin_panel" method="post">
+      <form class="searchfield" action="{{ url_for('display_search') }}" method="post">
         <p>Search by:</p>
         <select class="drop" name="column">
           <option name="" value="f_name">F.Name</option>
