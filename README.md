@@ -1,18 +1,22 @@
 # turntablNewbiesSystem
 A project for the management of Turntabl TLC and Internship programmes.
 
-This is a simple web app created for all interested in working as interns with Turntabl or
-anyone who is done with school and is looking forward to do their service with Turntabl to 
-be able to apply for the TLC training program.
+	This is a simple web app created for all interested in working as interns with Turntabl or
+	anyone who is done with school and is looking forward to do their service with Turntabl to 
+	be able to apply for the TLC training program.
 
 Overview
-An online system where programmers (software engineers) can register for TLC and Internship programs. Also An administrator has the permission to view applicants' details and send responses to applicants.
+
+	An online system where programmers (software engineers) can register for TLC and Internship programs. 
+	Also An administrator has the permission to view applicants' 	
+	details and send responses to applicants.
 
 Goals
-For easy access of application to applicants
-Easy access to applicants details
-Easy to sort between applicants (Intern & TLC)
-Easy to contact applicants
+
+	For easy access of application to applicants
+	Easy access to applicants details
+	Easy to sort between applicants (Intern & TLC)
+	Easy to contact applicants
 
 
 Specifications
