@@ -24,14 +24,15 @@ app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
 
+#Sample message to be sent to every applicant after submitting their application.
 subject = "Turntabl - Software Engineering Application"
 msg = """Dear Applicant,
-            Thank you very much for applying for the Software engineering internship program at Turntabl. I'd like to let you know that we have received your application. 
+            Thank you for applying for the Software engineering internship program at Turntabl. Your application has been received. 
 
             Our hiring team has begun reviewing all applications and shortlisting candidates for a telephone interview.   
             We will at every stage of the interview process keep you posted on the status of your application.
 
-            Thank you, again, for taking the time to apply for this role at Turntabl.
+            Thank you once again, for taking the time to apply for this role at Turntabl.
 
             --
             Regards,
@@ -40,7 +41,7 @@ msg = """Dear Applicant,
             Turntabl Ghana.
     """
 
-
+#Sends messages to every applicant after they submit their application
 def massage_server(email):
     message = Message(subject, sender="turntabl80@gmail.com", recipients=[email])
     message.body = msg
@@ -59,7 +60,7 @@ def display_admins_panel():
     print(details)
     return render_template('html/adminPage.html', details=details)
 
-
+# to submit data to be processed to the server and to request data from the server
 @app.route("/admin_panel", methods=['POST', 'GET'])
 def display_search():
     if request.method == 'POST':
@@ -75,6 +76,7 @@ def display_search():
 def display_admins_log():
     return render_template("html/adminLogin.html")
 
+# to submit the administrator data to be processed to the server and to request data from the server
 
 @app.route("/adminlogin", methods=['POST', 'GET'])
 def admins_log():
@@ -84,7 +86,7 @@ def admins_log():
             return render_template("html/adminPage.html", details=details)
     return render_template("html/adminLogin.html", msg="Incorrect Details")
 
-
+#This gives access to the application form for all applicants to apply and submit their applicationn and return back to the homepage.
 @app.route('/register')
 def display_form():
     return render_template('html/register.html')
