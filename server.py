@@ -49,7 +49,7 @@ def massage_server(email):
     return 0
 
 
-@app.route("/homepage")
+@app.route("/")
 def display_homepage():
     return render_template("html/home.html")
 
