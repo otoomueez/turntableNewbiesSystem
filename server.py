@@ -27,9 +27,9 @@ mail = Mail(app)
 #Sample message to be sent to every applicant after submitting their application.
 subject = "Turntabl - Software Engineering Application"
 msg = """Dear Applicant,
-            Thank you for applying for the Software engineering internship program at Turntabl. Your application has been received. 
+            Thank you for applying for the Software engineering program at Turntabl. Your application has been received. 
 
-            Our hiring team has begun reviewing all applications and shortlisting candidates for a telephone interview.   
+            Our hiring team has begun reviewing all applications and shortlisting applicants for a telephone interview.   
             We will at every stage of the interview process keep you posted on the status of your application.
 
             Thank you once again, for taking the time to apply for this role at Turntabl.
