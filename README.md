@@ -56,13 +56,14 @@ Backend
 
 Tools/Technologies
 
-	  - Python
-		- Flask
-		- Jinja
+    - Python
+	- Flask
+	- Jinja
     - SQLite
-	  - HTML
+    - HTML
     - CSS
-	  - JavaScript
+    - bootstrap
+    - JavaScript
     
 MILESTONES
 
