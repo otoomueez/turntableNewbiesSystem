@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>TNS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+                      <i class="fa fa-bars"></i>
+                      <span class="sr-only">Toggle Menu</span>
+                    </button>
+                 </div>
+                <h1><a href="http//:localhost:5000/homepage" class="logo">TNS</a>
+                <img class="logo_img" src="https://pbs.twimg.com/profile_images/1308038223910916097/0KJOLcaX_400x400.jpg" alt="logo"/>
+                </h1>
+                <div class="btns">
+                    <a href="http://localhost:5000/register" class="button"><button class="link">REGISTER</button></a>
+                    <a href="http://localhost:5000/adminlogin" class="button"><button class="link">ADMIN LOGIN</button></a>
+                </div>
+                <div class="contact">
+                    <p>Contact us on:</p>
+                    <p class="c_links">
+                        <a href="https://turntabl.io" class="sb website"></a>
+                        <a id="push" href="https://gh.linkedin.com/company/turntabl" class="sb linkedin"></a>
+                        <a href="https://twitter.com/turntablio" class="sb twitter"></a>
+                    </p>
+                </div>
+
+    	    </nav>
+
+        <!-- Page Content  -->
+          <div id="content" class="p-4 p-md-5 pt-5">
+            <h2 class="heading">ABOUT TLC</h2>
+
+                TLC recruits the most talented developers in Ghana and train them into the most talented developers in African. All new engineers start with the TLC which is an 11-week Wall Street standard training program. Graduating as an Associate Junior Developer Software Engineer. Following graduation, you’ll be available for client work, working on projects with and learning from experienced developers whilst developing your client-facing skills and having a direct impact on how their business is run.
+
+                <br/><br/>TOPICS COVERED IN THE TRAINING INCLUDE:<br/>
+                •	Java<br/>
+                •	Object Oriented Programming<br/>
+                •	Scala<br/>
+                •	Database<br/>
+                •	Distributed Systems<br/>
+                •	Agile Software Engineering etc.<br/>
+                <br/>BENEFITS:<br/>
+                Benefits include a comprehensive healthcare and competitive salary which will increase upon completion of the training. Turntabl aspires to be an employee-owned company, each year we issue discretionary shares with the long-term vision of the company being entirely owned by its employees.
+            <h2 class="heading">ABOUT INTERNSHIP</h2>
+                Turntabl internship recruits’ students from various institutions in Ghana in their third year of school and train them. All selected applicants start their 3-week training program during their long break from schools.This internship seeks to train students in software engineering and agile software development.
+                <br/><br/>
+                BENEFITS:
+                Benefits include stipend upon successful completion of the internship program and working on a project with your team.
+
+          </div>
+
+        </div>
+
+    <script language="javascript">
+        function autoResizeDiv()
+        {
+            document.getElementById('sidebar').style.height = window.innerHeight +'px';
+        }
+        window.onresize = autoResizeDiv();
+        autoResizeDiv();
+    </script>
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+  </body>
+</html>

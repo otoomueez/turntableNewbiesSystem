@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <title>Simple Sign up from</title>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+      html, body {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+   
+    }
+    body{
+    background-image: url("bg.jpeg");
+    box-sizing: cover;
+    background-repeat:no-repeat ;
+    }
+    .wrapper{
+      border-radius: 30px;
+      width: 60%;
+      box-shadow: 2px 5px 15px 2px #ccc;
+      border:none;
+      
+    }
+    #msg{
+      text-align: center;
+      color: red;
+      text-shadow: 0 0 10px red;
+
+    }
+  
+    input[type=text], input[type=password], input[type=email], input[type=number] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    .icon {
+    font-size: 110px;
+    display: flex;
+    justify-content: center;
+    color: #4286f4;
+    }
+    button {
+    background-color: #4286f4;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grab;
+    width: 48%;
+    }
+    h1 {
+    text-align:center;
+    font-size:18;
+    }
+    button:hover {
+    opacity: 0.8;
+    }
+    .formcontainer {
+    text-align: center;
+    margin: 24px 50px 12px;
+    }
+    .container {
+    padding: 16px 0;
+    text-align:left;
+    }
+    span.psw {
+    float: right;
+    padding-top: 0;
+    padding-right: 15px;
+    }
+    /* Change styles for span on extra small screens */
+    @media screen and (max-width: 300px) {
+    span.psw {
+    display: block;
+    float: none;
+      }
+    }
+    #submit{
+      width: 50%;
+      border: none;
+      border-radius: 40px;
+      background: rgb(83, 83, 255);
+      color: #fff;
+      padding: 10px;
+      height: 38px;
+      box-shadow: 2px 5px 15px 2px #ccc;
+    }
+    #submit:hover{
+      background-color:blue;
+      width: 55%;
+      height: 40px;
+    }
+    #submit:active{
+      background-color: rgb(148, 67, 0);
+    }
+    .gender,.apptype{
+      margin-top: 25px;
+      margin-bottom: 25px;
+   
+     
+    }
+    select{
+      margin-left: 25px;
+      width: 25%;
+      height: 35px;
+      padding-left: 20px;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+    #resume{
+      margin-bottom: 25px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="http://localhost:5000/register" method="POST" >
+        <h1>REGISTRATION FORM</h1>
+        <p id="msg"> {{ msg }} </p>
+        <div class="icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="formcontainer">
+          <div class="container">
+            <label for="fname"><strong>First Name</strong></label>
+            <input type="text" placeholder="Enter first name" name="fname" required>
+            <label for="mname"><strong>Middle Name</strong></label>
+            <input type="text" placeholder="Enter Middle name" name="mname" >
+            <label for="lname"><strong>Last Name</strong></label>
+            <input type="text" placeholder="Enter last name" name="lname" required>
+            <div class="gender">
+              <label for="gender"  class="gender"><strong>Gender</strong>
+                  <select name="gender">
+                    <option id="male" name="male">Male</option>
+                    <option id="female" name="female">Female</option>
+                  </select>
+              </label>
+            </div>
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" placeholder="Enter year email" name="email" required>
+            <label for="phone"><strong>Phone</strong></label>
+            <input type="text" placeholder="Enter phone" name="phone">
+            <label for="year"><strong>Graduation Year</strong></label>
+            <input type="number" placeholder="Enter graduation year" name="year">
+            <label for="school"><strong>School</strong></label>
+            <input type="text" placeholder="Enter your school" name="school" >
+            <div class="apptype">
+              <label for="apptype" ><strong>Application Type</strong>
+                <select name="apptype">
+                  <option id="tlc" name="tlc">TLC</option>
+                  <option id="intern" name="intern">Intern</option>
+                </select>
+              </label>
+            </div>
+            <label for="resume"><strong>Resume</strong></label>
+            <input type="file" id="" name="resume" required>
+          </div>
+          <input type="submit" value="SUBMIT" id="submit">
+        </div>
+      </form>
+  </div>
+  </body>
+</html>
